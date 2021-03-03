@@ -2,7 +2,8 @@ trigger:
 - master
 
 pool:
- vmImage: 'windows-latest'
+  name: HostedAgent
+  demands: agent.os -equals Windows_NT    # the agent must have this capability to run the job
 
 variables:
  buildConfiguration: 'Release'
